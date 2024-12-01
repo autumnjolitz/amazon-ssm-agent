@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+
+echo "Stopping agent"
+service amazon-ssm-agent stop || true

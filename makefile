@@ -52,6 +52,8 @@ finalize:: build-tests copy-package-dep
 dev-build-linux: clean quick-integtest checkstyle pre-release build-linux
 .PHONY: dev-build-freebsd
 dev-build-freebsd: clean quick-integtest checkstyle pre-release build-freebsd
+.PHONY: dev-build-dragonfly
+dev-build-dragonfly: clean quick-integtest checkstyle pre-release build-dragonfly
 .PHONY: dev-build-windows
 dev-build-windows: clean quick-integtest checkstyle pre-release build-windows
 .PHONY: dev-build-linux-386
@@ -167,6 +169,12 @@ build-freebsd: GOARCH=amd64
 build-freebsd: GOOS=freebsd
 build-freebsd: GO_BUILD=$(GO_BUILD_NOPIE)
 build-freebsd: build-any-amd64-freebsd
+
+.PHONY: build-dragonfly
+build-dragonfly: GOARCH=amd64
+build-dragonfly: GOOS=dragonfly
+build-dragonfly: GO_BUILD=$(GO_BUILD_NOPIE)
+build-dragonfly: build-any-amd64-dragonfly
 
 .PHONY: build-darwin-amd64
 build-darwin-amd64: GOARCH=amd64
@@ -323,6 +331,9 @@ create-package-folder:
 package-linux: package-rpm-386 package-deb-386 package-rpm package-deb package-deb-arm package-deb-arm64 package-rpm-arm64 package-binaries-linux-amd64 package-binaries-linux-arm64
 	$(GO_SPACE)/Tools/src/create_linux_package.sh
 
+.PHONY: package-dragonfly
+package-dragonfly: package-dragonfly-pkg
+
 .PHONY: package-windows
 package-windows: package-win-386 package-win
 	$(GO_SPACE)/Tools/src/create_windows_package.sh
@@ -340,6 +351,10 @@ package-rpm: create-package-folder
 .PHONY: package-deb
 package-deb: create-package-folder
 	$(GO_SPACE)/Tools/src/create_deb.sh amd64
+
+.PHONY: package-dragonfly-pkg
+package-dragonfly-pkg: create-package-folder
+	$(GO_SPACE)/Tools/src/create_dragonfly_pkg.sh amd64
 
 .PHONY: package-win
 package-win: create-package-folder

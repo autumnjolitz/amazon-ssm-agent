@@ -1,0 +1,21 @@
+#!/bin/sh
+#
+
+# PROVIDE: amazon_ssm_agent
+# REQUIRE: NETWORKING
+# BEFORE:  LOGIN
+
+. /etc/rc.subr
+
+name=amazon_ssm_agent
+rcvar=amazon_ssm_agent_enable
+procname="${amazon_ssm_agent_bin:-"$BINDIR/amazon-ssm-agent"}"
+# read configuration and set defaults
+load_rc_config $name
+: ${amazon_ssm_agent_enable:="NO"}
+
+pidfile="/var/run/${name}.pid"
+command="/usr/sbin/daemon"
+command_args="-S -p ${pidfile} ${procname}"
+
+run_rc_command "$1"

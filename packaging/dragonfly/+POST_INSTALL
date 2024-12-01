@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+
+if ! grep -E '^(\s*)amazon_ssm_agent_enable=' /etc/rc.conf >/dev/null; then
+    echo 'Enabling agent'
+    echo 'amazon_ssm_agent_enable="YES"' | tee -a /etc/rc.conf >/dev/null
+fi
+echo "Starting agent"
+service amazon-ssm-agent start

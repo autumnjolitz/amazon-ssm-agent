@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+echo "Preparing for install"
+if service -e | grep -E 'amazon[-_]ssm[-_]agent$' > /dev/null; then
+    echo 'Stopping current amazon-ssm-agent'
+    service amazon-ssm-agent stop || true
+fi

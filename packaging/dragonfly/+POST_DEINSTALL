@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+
+if grep -E '^(\s*)amazon_ssm_agent_enable=' /etc/rc.conf >/dev/null; then
+    >&2 echo 'Removing amazon_ssm_agent_enable= from rc.conf'
+    sed -i '' -E '/^(\s*)amazon_ssm_agent_enable=/d' /etc/rc.conf
+fi
