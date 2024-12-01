@@ -11,8 +11,8 @@
 // either express or implied. See the License for the specific language governing
 // permissions and limitations under the License.
 
-//go:build darwin || freebsd || linux || netbsd || openbsd
-// +build darwin freebsd linux netbsd openbsd
+//go:build darwin || freebsd || linux || netbsd || openbsd || dragonfly
+// +build darwin freebsd linux netbsd openbsd dragonfly
 
 // Package selfupdate provides an interface to force update with Message Gateway Service and S3
 // This file contains the constant for generating command for linux os

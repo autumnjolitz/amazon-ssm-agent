@@ -11,8 +11,8 @@
 // either express or implied. See the License for the specific language governing
 // permissions and limitations under the License.
 
-//go:build darwin || freebsd || linux || netbsd || openbsd
-// +build darwin freebsd linux netbsd openbsd
+//go:build darwin || freebsd || linux || netbsd || openbsd || dragonfly
+// +build darwin freebsd linux netbsd openbsd dragonfly
 
 // Package rebooter provides utilities used to reboot a machine.
 package rebooter

@@ -14,8 +14,8 @@
 // Package pluginutil implements some common functions shared by multiple plugins.
 // pluginutil_unix contains a function for returning the ResultStatus based on the exitCode
 //
-//go:build darwin || freebsd || linux || netbsd || openbsd
-// +build darwin freebsd linux netbsd openbsd
+//go:build darwin || freebsd || linux || netbsd || openbsd || dragonfly
+// +build darwin freebsd linux netbsd openbsd dragonfly
 
 package pluginutil
 

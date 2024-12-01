@@ -14,8 +14,8 @@
 // Package processor contains the methods for update ssm agent.
 // It also provides methods for sendReply and updateInstanceInfo
 
-//go:build darwin || freebsd || linux || netbsd || openbsd
-// +build darwin freebsd linux netbsd openbsd
+//go:build darwin || freebsd || linux || netbsd || openbsd || dragonfly
+// +build darwin freebsd linux netbsd openbsd dragonfly
 
 package processor
 

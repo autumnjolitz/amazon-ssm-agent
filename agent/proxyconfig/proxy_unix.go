@@ -1,5 +1,5 @@
-//go:build freebsd || linux || netbsd || openbsd
-// +build freebsd linux netbsd openbsd
+//go:build freebsd || linux || netbsd || openbsd || dragonfly
+// +build freebsd linux netbsd openbsd dragonfly
 
 // Copyright 2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 //

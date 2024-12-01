@@ -1,5 +1,5 @@
-//go:build freebsd || linux || netbsd || openbsd
-// +build freebsd linux netbsd openbsd
+//go:build freebsd || linux || netbsd || openbsd || dragonfly
+// +build freebsd linux netbsd openbsd dragonfly
 
 package osdetect
 

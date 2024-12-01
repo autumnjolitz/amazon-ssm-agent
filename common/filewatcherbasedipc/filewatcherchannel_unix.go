@@ -13,8 +13,8 @@
 
 // package filewatcherbasedipc is used to establish IPC between master and workers using files.
 //
-//go:build darwin || freebsd || linux || netbsd || openbsd
-// +build darwin freebsd linux netbsd openbsd
+//go:build darwin || freebsd || linux || netbsd || openbsd || dragonfly
+// +build darwin freebsd linux netbsd openbsd dragonfly
 
 package filewatcherbasedipc
 

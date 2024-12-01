@@ -1,6 +1,6 @@
-//go:build integration && (freebsd || linux || netbsd || openbsd || darwin)
+//go:build integration && (freebsd || linux || netbsd || openbsd || dragonfly || darwin)
 // +build integration
-// +build freebsd linux netbsd openbsd darwin
+// +build freebsd linux netbsd openbsd dragonfly darwin
 
 package runcommand
 

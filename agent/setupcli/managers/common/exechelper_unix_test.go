@@ -11,8 +11,8 @@
 // either express or implied. See the License for the specific language governing
 // permissions and limitations under the License.
 
-//go:build freebsd || linux || netbsd || openbsd || darwin
-// +build freebsd linux netbsd openbsd darwin
+//go:build freebsd || linux || netbsd || openbsd || dragonfly || darwin
+// +build freebsd linux netbsd openbsd dragonfly darwin
 
 // Package common contains common constants and functions needed to be accessed across ssm-setup-cli
 package common

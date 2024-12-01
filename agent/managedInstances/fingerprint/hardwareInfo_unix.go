@@ -11,8 +11,8 @@
 // either express or implied. See the License for the specific language governing
 // permissions and limitations under the License.
 
-//go:build freebsd || linux || netbsd || openbsd || darwin
-// +build freebsd linux netbsd openbsd darwin
+//go:build freebsd || linux || netbsd || openbsd || dragonfly || darwin
+// +build freebsd linux netbsd openbsd dragonfly darwin
 
 // Package fingerprint contains functions that helps identify an instance
 // hardwareInfo contains platform specific way of fetching the hardware hash

@@ -11,8 +11,8 @@
 // either express or implied. See the License for the specific language governing
 // permissions and limitations under the License.
 
-//go:build freebsd || linux || netbsd || openbsd || darwin || windows
-// +build freebsd linux netbsd openbsd darwin windows
+//go:build freebsd || linux || netbsd || openbsd || dragonfly || darwin || windows
+// +build freebsd linux netbsd openbsd dragonfly darwin windows
 
 package diagnostics
 

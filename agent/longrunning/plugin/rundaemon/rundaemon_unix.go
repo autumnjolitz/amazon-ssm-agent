@@ -1,5 +1,5 @@
-//go:build darwin || freebsd || linux || netbsd || openbsd
-// +build darwin freebsd linux netbsd openbsd
+//go:build darwin || freebsd || linux || netbsd || openbsd || dragonfly
+// +build darwin freebsd linux netbsd openbsd dragonfly
 
 // Copyright 2016 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 //

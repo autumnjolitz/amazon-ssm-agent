@@ -11,8 +11,8 @@
 // either express or implied. See the License for the specific language governing
 // permissions and limitations under the License.
 
-//go:build (darwin || freebsd || linux || netbsd || openbsd) && e2e
-// +build darwin freebsd linux netbsd openbsd
+//go:build (darwin || freebsd || linux || netbsd || openbsd || dragonfly) && e2e
+// +build darwin freebsd linux netbsd openbsd dragonfly
 // +build e2e
 
 // Package shell implements session shell plugin.
